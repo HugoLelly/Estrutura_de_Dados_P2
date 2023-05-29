@@ -25,6 +25,7 @@ HUGO LELY DE LIMA MARINHO
 # P2 - ENUNCIADO E REGRAS
 
 *ENUNCIADO:*
+
 A Universidade de Vassouras do Campus 1 foi convidada pela Prefeitura de Maricá para promover uma solução tecnológica em um dos problemas sociais da cidade, o abandono de animais. Mesmo considerado crime (O abandono de animais é crime, previsto na Lei de Crimes Ambientais - Lei Federal n° 9.605 de 1998), e notório que o índice de abandono vem crescendo a cada ano.
 Os alunos do curso de Engenharia de Software foram convocados para a reunião com a secretaria da cidade para entender a demanda solicitada e alguns pontos foram levantados.
 A prefeitura precisa de um sistema que possa cadastrar todos os animais por tipo (canino, felino etc.) e para tanto, é uma premissa que seja possível inserir novos tipos dinamicamente.
@@ -36,6 +37,7 @@ Os alunos anotaram atentamente a todas as observações, criaram o fluxograma do
 A ideia foi apenas validar a proposta do programa junto ao solicitante.
 
 *REGRAS DE AVALIAÇÃO:*
+
 •	FLUXOGRAMA EM PDF NO REPOSITÓRIO (1 PONTO)
 	Organização clara (0,5 Pontos)
 	Funcional de acordo com o enunciado (0,5 Pontos)
