@@ -38,4 +38,3 @@ while sair:
         print(f"\n\tOpção Inválida!\n\taguarde...")
         sleep(3)
         os.system('clear') or None
-
