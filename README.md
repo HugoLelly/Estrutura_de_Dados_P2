@@ -7,7 +7,7 @@
 >
 >_DISCIPLINA:_ **ESTRUTURA DE DADOS**
 >
->_PROFESSOR:_ **MÁRCIO GARRIDO**
+>_PROFESSOR:_ **[MÁRCIO GARRIDO](https://github.com/marciogarridoLaCop)**
 >
 >_TÍTULO:_ **P2 - ENUNCIADO E REGRAS**
 >
