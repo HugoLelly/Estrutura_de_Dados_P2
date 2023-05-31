@@ -3,7 +3,7 @@ from time import sleep
 
 cad_animal = str(print("\n\tCADASTRO ANIMAL"))
 sair = True
-cad_tipo = []
+cad_especie = []
 cad_raca = []
 cad_idade = []
 cad_cor = []
@@ -13,8 +13,8 @@ cad_particularidades = []
 while sair:
     cad_an = str(input(f"\n\tDeseja Cadastrar um Animal?\n\t[S] Sim [N] Não: "))
     if cad_an == "S" or cad_an == "s":
-        tipo = str(input(f"\n\tInforme o tipo do animal: "))
-        cad_tipo.append(tipo)
+        tipo = str(input(f"\n\tInforme a espécie do animal: "))
+        cad_especie.append(tipo)
         raca = str(input(f"\n\tInforme a raça do animal: "))
         cad_raca.append(raca)
         idade = str(input(f"\n\tInforme a idade aproximada do animal: "))
@@ -27,7 +27,7 @@ while sair:
         cad_particularidades.append(particularidades)
         sleep(3)
         os.system('clear') or None
-        print(f"\n\tTipo: {cad_tipo} \n\tRaça: {cad_raca} \n\tIdade: {cad_idade} \n\tCor: {cad_cor} \n\tPorte: {cad_porte} \n\tParticularidades: {cad_particularidades}")
+        print(f"\n\tEspécie: {cad_especie} \n\tRaça: {cad_raca} \n\tIdade: {cad_idade} \n\tCor: {cad_cor} \n\tPorte: {cad_porte} \n\tParticularidades: {cad_particularidades}")
         sleep(3)
         os.system('clear') or None
     elif cad_an == "N" or cad_an == "n":
