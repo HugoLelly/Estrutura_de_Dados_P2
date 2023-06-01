@@ -20,6 +20,7 @@ def cadastro_animal():
     print("\n\tCADASTRO ANIMAL")
     sair = True
     while sair:
+        os.system('cls') or None
         cad_an = str(input(f"\n\tDeseja Cadastrar um Animal?\n\t[S] Sim \n\t[N] Não: "))
         if cad_an == "S" or cad_an == "s":
             os.system('cls') or None
@@ -35,8 +36,8 @@ def cadastro_animal():
             cad_porte.append(porte)
             particularidades = str(input(f"\n\tInforme as particularidades do animal: "))
             cad_particularidades.append(particularidades)
-            sleep(3)
             os.system('cls') or None
+            sleep(2)
             print(f"\n\tANIMAL CADASTRADO")
             print(f"\n\tEspécie: {cad_especie} \n\tRaça: {cad_raca} \n\tIdade: {cad_idade} \n\tCor: {cad_cor} \n\tPorte: {cad_porte} \n\tParticularidades: {cad_particularidades}")
             sleep(5)
@@ -55,6 +56,7 @@ def cadastro_candidatos():
     print("\n\tCADASTRO DOS CANDIDATOS PARA ADOÇÃO")
     sair = True
     while sair:
+        os.system('cls') or None
         cad_cand = str(input(f"\n\tDeseja Cadastrar um Candidato?\n\t[S] Sim \n\t[N] Não: "))
         if cad_cand == "S" or cad_cand == "s":
             os.system('cls') or None
@@ -70,8 +72,8 @@ def cadastro_candidatos():
             cad_can_especie.append(especie)
             particularidades = str(input(f"\n\tInforme as particularidades do animal desejado: "))
             cad_can_particularidades.append(particularidades)
-            sleep(3)
             os.system('cls') or None
+            sleep(2)
             print(f"\n\tCANDIDATO CADASTRADO")
             print(f"\n\tNome: {cad_can_nome} \n\tTelefone: {cad_can_telefone} \n\tEmail: {cad_can_email} \n\tBairro: {cad_can_bairro} \n\tEspécie: {cad_can_especie} \n\tParticularidades: {cad_can_particularidades}")
             sleep(5)
