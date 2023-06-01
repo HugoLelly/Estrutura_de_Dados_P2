@@ -15,8 +15,6 @@ cad_can_bairro = []
 cad_can_especie = []
 cad_can_particularidades = []
 
-
-
 def cadastro_animal():
     os.system('cls') or None
     print("\n\tCADASTRO ANIMAL")
@@ -24,6 +22,7 @@ def cadastro_animal():
     while sair:
         cad_an = str(input(f"\n\tDeseja Cadastrar um Animal?\n\t[S] Sim \n\t[N] Não: "))
         if cad_an == "S" or cad_an == "s":
+            os.system('cls') or None
             tipo = str(input(f"\n\tInforme a espécie do animal: "))
             cad_especie.append(tipo)
             raca = str(input(f"\n\tInforme a raça do animal: "))
@@ -41,16 +40,15 @@ def cadastro_animal():
             print(f"\n\tANIMAL CADASTRADO")
             print(f"\n\tEspécie: {cad_especie} \n\tRaça: {cad_raca} \n\tIdade: {cad_idade} \n\tCor: {cad_cor} \n\tPorte: {cad_porte} \n\tParticularidades: {cad_particularidades}")
             sleep(5)
-            os.system('cls') or None
         elif cad_an == "N" or cad_an == "n":
+            os.system('cls') or None
             print(f"\n\tSaindo do Cadastro!\n\tAguarde...")
-
             sleep(3)
             menu()
         else:
+            os.system('cls') or None
             print(f"\n\tOpção Inválida!\n\tAguarde...")
             sleep(3)
-            os.system('cls') or None
 
 def cadastro_candidatos():
     os.system('cls') or None
@@ -59,6 +57,7 @@ def cadastro_candidatos():
     while sair:
         cad_cand = str(input(f"\n\tDeseja Cadastrar um Candidato?\n\t[S] Sim \n\t[N] Não: "))
         if cad_cand == "S" or cad_cand == "s":
+            os.system('cls') or None
             nome = str(input(f"\n\tInforme o nome do candidato: "))
             cad_can_nome.append(nome)
             telefone = str(input(f"\n\tInforme o telefone do candidato: "))
@@ -76,17 +75,19 @@ def cadastro_candidatos():
             print(f"\n\tCANDIDATO CADASTRADO")
             print(f"\n\tNome: {cad_can_nome} \n\tTelefone: {cad_can_telefone} \n\tEmail: {cad_can_email} \n\tBairro: {cad_can_bairro} \n\tEspécie: {cad_can_especie} \n\tParticularidades: {cad_can_particularidades}")
             sleep(5)
+        elif cad_an == "N" or cad_an == "n":
             os.system('cls') or None
-
-
-
-    sleep(3)
-    menu()
+            print(f"\n\tSaindo do Cadastro!\n\tAguarde...")
+            sleep(3)
+            menu()
+        else:
+            os.system('cls') or None
+            print(f"\n\tOpção Inválida!\n\tAguarde...")
+            sleep(3)
 
 def consulta():
     os.system('cls') or None
     print("\n\tCONSULTA DOS ANIMAIS PARA ADOÇÃO")
-    while
     sleep(3)
     menu()
 
