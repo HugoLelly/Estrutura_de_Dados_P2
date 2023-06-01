@@ -35,6 +35,7 @@ def cadastro_animal():
             print(f"\n\tSaindo do Cadastro!\n\taguarde...")
             sleep(3)
             os.system('clear') or None
+            menu()
         else:
             print(f"\n\tOpção Inválida!\n\taguarde...")
             sleep(3)
@@ -65,3 +66,5 @@ def menu():
         print(f"\n\tOpção Inválida!\n\taguarde...")
         sleep(3)
         os.system('clear') or None
+
+menu()
