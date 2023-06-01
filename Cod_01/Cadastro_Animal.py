@@ -8,6 +8,13 @@ cad_cor = []
 cad_porte = []
 cad_particularidades = []
 
+cad_can_nome = []
+cad_can_telefone = []
+cad_can_email = []
+cad_can_bairro = []
+cad_can_especie = []
+cad_can_particularidades = []
+
 
 
 def cadastro_animal():
@@ -46,12 +53,6 @@ def cadastro_animal():
             os.system('cls') or None
 
 def cadastro_candidatos():
-    cad_can_nome = []
-    cad_can_telefone = []
-    cad_can_email = []
-    cad_can_bairro = []
-    cad_can_especie = []
-    cad_can_particularidades = []
     os.system('cls') or None
     print("\n\tCADASTRO DOS CANDIDATOS PARA ADOÇÃO")
     sair = True
