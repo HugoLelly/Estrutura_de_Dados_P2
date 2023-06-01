@@ -8,7 +8,10 @@ cad_cor = []
 cad_porte = []
 cad_particularidades = []
 
+
+
 def cadastro_animal():
+    os.system('cls') or None
     print("\n\tCADASTRO ANIMAL")
     sair = True
     while sair:
@@ -43,14 +46,39 @@ def cadastro_animal():
             os.system('cls') or None
 
 def cadastro_candidatos():
+    cad_can_nome = []
+    cad_can_telefone = []
+    cad_can_email = []
+    cad_can_bairro = []
     os.system('cls') or None
     print("\n\tCADASTRO DOS CANDIDATOS PARA ADOÇÃO")
+    sair = True
+    while sair:
+        cad_cand = str(input(f"\n\tDeseja Cadastrar um Candidato?\n\t[S] Sim \n\t[N] Não: "))
+        if cad_cand == "S" or cad_cand == "s":
+            nome = str(input(f"\n\tInforme o nome do candidato: "))
+            cad_can_nome.append(nome)
+            telefone = str(input(f"\n\tInforme o telefone do candidato: "))
+            cad_can_telefone.append(telefone)
+            email = str(input(f"\n\tInforme o e-mail do candidato: "))
+            cad_can_email.append(email)
+            bairro = str(input(f"\n\tInforme o bairro do candidato: "))
+            cad_can_bairro.append(bairro)
+            sleep(3)
+            os.system('cls') or None
+            print(f"\n\tCANDIDATO CADASTRADO")
+            print(f"\n\tNome: {cad_can_nome} \n\tTelefone: {cad_can_telefone} \n\tE-mail: {cad_can_email} \n\tBairro: {cad_can_bairro}")
+            sleep(5)
+            os.system('cls') or None
+
+
     sleep(3)
     menu()
 
 def consulta():
     os.system('cls') or None
     print("\n\tCONSULTA DOS ANIMAIS PARA ADOÇÃO")
+    while
     sleep(3)
     menu()
 
