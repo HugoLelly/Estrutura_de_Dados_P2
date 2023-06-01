@@ -98,8 +98,27 @@ def sobre():
     print("\n\tSISTEMA DE ADOÇÃO DE ANIMAIS")
     sleep(1)
     print("\n\tDesenvolvido por: \n\t\tHugo Lelly de Lima Marinho")
+    sleep(2)
+    os.system('cls') or None
+    print("\n\tUNIVERSIDADE DE VASSOURAS")
     sleep(1)
-    
+    print("\n\tCAMPUS MARICÁ")
+    sleep(1)
+    print("\n\tCURSO: ENGENHARIA DE SOFTWARE")
+    sleep(1)
+    print("\n\tDISCIPLINA: ESTRUTURA DE DADOS")
+    sleep(1)
+    print("\n\tPROFESSOR: MÁRCIO GARRIDO")
+    sleep(1)
+    print("\n\tTÍTULO: P2 - ENUNCIADO E REGRAS")
+    sleep(1)
+    print("\n\tTURMA: 2022.1 – TURMA A")
+    sleep(1)
+    print("\n\tMATRÍCULA: 202211182")
+    sleep(1)
+    print("\n\tNOME: HUGO LELY DE LIMA MARINHO")
+    sleep(10)
+    menu()
 
 def menu():
     os.system('cls') or None
