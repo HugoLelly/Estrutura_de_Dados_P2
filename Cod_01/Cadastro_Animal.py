@@ -77,7 +77,7 @@ def cadastro_candidatos():
             print(f"\n\tCANDIDATO CADASTRADO")
             print(f"\n\tNome: {cad_can_nome} \n\tTelefone: {cad_can_telefone} \n\tEmail: {cad_can_email} \n\tBairro: {cad_can_bairro} \n\tEspécie: {cad_can_especie} \n\tParticularidades: {cad_can_particularidades}")
             sleep(5)
-        elif cad_an == "N" or cad_an == "n":
+        elif cad_cand == "N" or cad_cand == "n":
             os.system('cls') or None
             print(f"\n\tSaindo do Cadastro!\n\tAguarde...")
             sleep(3)
