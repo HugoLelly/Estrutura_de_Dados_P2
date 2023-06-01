@@ -9,10 +9,10 @@ cad_porte = []
 cad_particularidades = []
 
 def cadastro_animal():
-    cad_animal = str(print("\n\tCADASTRO ANIMAL"))
+    print("\n\tCADASTRO ANIMAL")
     sair = True
     while sair:
-        cad_an = str(input(f"\n\tDeseja Cadastrar um Animal?\n\t[S] Sim [N] Não: "))
+        cad_an = str(input(f"\n\tDeseja Cadastrar um Animal?\n\t[S] Sim \n\t[N] Não: "))
         if cad_an == "S" or cad_an == "s":
             tipo = str(input(f"\n\tInforme a espécie do animal: "))
             cad_especie.append(tipo)
@@ -40,7 +40,13 @@ def cadastro_animal():
             sleep(3)
             os.system('clear') or None
 
+def cadastro_candidatos():
+    print("\n\tCADASTRO DOS CANDIDATOS PARA ADOÇÃO")
+
+
 def consulta():
-    consulta_animal = str(print("\n\tCONSULTA ANIMAL"))
-    sair = True
-    while sair:
+    print("\n\tCONSULTA DOS ANIMAIS PARA ADOÇÃO")
+
+
+print(f"\n\tBEM VINDO AO SISTEMA DE ADOÇÃO DE ANIMAIS\n\tEscolha uma das opções abaixo:\n\t[1] Cadastrar Animal\n\t[2] Cadastrar Candidatos\n\t[3] Consultar Animais para Adoção\n\t[4] Sair do Sistema")
+opcao = int(input(f"\n\tInforme a opção desejada: "))
