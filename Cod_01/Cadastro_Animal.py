@@ -43,10 +43,16 @@ def cadastro_animal():
 
 def cadastro_candidatos():
     print("\n\tCADASTRO DOS CANDIDATOS PARA ADOÇÃO")
+    sleep(3)
+    os.system('clear') or None
+    menu()
 
 
 def consulta():
     print("\n\tCONSULTA DOS ANIMAIS PARA ADOÇÃO")
+    sleep(3)
+    os.system('clear') or None
+    menu()
 
 
 def menu():
