@@ -93,9 +93,17 @@ def consulta():
     sleep(3)
     menu()
 
+def sobre():
+    os.system('cls') or None
+    print("\n\tSISTEMA DE ADOÇÃO DE ANIMAIS")
+    sleep(1)
+    print("\n\tDesenvolvido por: \n\t\tHugo Lelly de Lima Marinho")
+    sleep(1)
+    
+
 def menu():
     os.system('cls') or None
-    print(f"\n\tBEM VINDO AO SISTEMA DE ADOÇÃO DE ANIMAIS\n\tEscolha uma das opções abaixo:\n\t[1] Cadastrar Animal\n\t[2] Cadastrar Candidatos\n\t[3] Consultar Animais para Adoção\n\t[4] Sair do Sistema")
+    print(f"\n\tBEM VINDO AO SISTEMA DE ADOÇÃO DE ANIMAIS\n\tEscolha uma das opções abaixo:\n\t[1] Cadastrar Animal\n\t[2] Cadastrar Candidatos\n\t[3] Consultar Animais para Adoção\n\t[4] Sobre\n\t[5] Sair")
     opcao = int(input(f"\n\tInforme a opção desejada: "))
     if opcao == 1:
         os.system('cls') or None
@@ -114,7 +122,14 @@ def menu():
         consulta()
     elif opcao == 4:
         os.system('cls') or None
+        print(f"\n\tAbrindo Sobre\n\tAguarde...")
+        sleep(3)
+        sobre()
+    elif opcao == 5:
+        os.system('cls') or None
         print(f"\n\tSaindo do Sistema!\n\tAguarde...")
+        sleep(2)
+        print(f"\n\tSistema Finalizado! Volte Sempre! :)")
         sleep(3)
         exit()
     else:
