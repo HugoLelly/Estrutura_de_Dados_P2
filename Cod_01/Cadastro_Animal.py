@@ -47,13 +47,11 @@ def cadastro_candidatos():
     os.system('clear') or None
     menu()
 
-
 def consulta():
     print("\n\tCONSULTA DOS ANIMAIS PARA ADOÇÃO")
     sleep(3)
     os.system('clear') or None
     menu()
-
 
 def menu():
     print(f"\n\tBEM VINDO AO SISTEMA DE ADOÇÃO DE ANIMAIS\n\tEscolha uma das opções abaixo:\n\t[1] Cadastrar Animal\n\t[2] Cadastrar Candidatos\n\t[3] Consultar Animais para Adoção\n\t[4] Sair do Sistema")
