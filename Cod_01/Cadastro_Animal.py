@@ -97,27 +97,43 @@ def sobre():
     os.system('cls') or None
     print("\n\tSISTEMA DE ADOÇÃO DE ANIMAIS")
     sleep(1)
-    print("\n\tDesenvolvido por: \n\t\tHugo Lelly de Lima Marinho")
-    sleep(2)
+    print("\n\tDesenvolvido por:\n\tHUGO LELY DE LIMA MARINHO")
+    sleep(1.5)
     os.system('cls') or None
     print("\n\tUNIVERSIDADE DE VASSOURAS")
     sleep(1)
-    print("\n\tCAMPUS MARICÁ")
+    print("\t  CAMPUS MARICÁ")
+    sleep(1.5)
+    print("\n\tCURSO:")
     sleep(1)
-    print("\n\tCURSO: ENGENHARIA DE SOFTWARE")
+    print("\t  ENGENHARIA DE SOFTWARE")
+    sleep(1.5)
+    print("\n\tDISCIPLINA:")
     sleep(1)
-    print("\n\tDISCIPLINA: ESTRUTURA DE DADOS")
+    print("\t  ESTRUTURA DE DADOS")
+    sleep(1.5)
+    print("\n\tPROFESSOR:")
     sleep(1)
-    print("\n\tPROFESSOR: MÁRCIO GARRIDO")
+    print("\t  MÁRCIO GARRIDO")
+    sleep(1.5)
+    print("\n\tTÍTULO:")
     sleep(1)
-    print("\n\tTÍTULO: P2 - ENUNCIADO E REGRAS")
+    print("\t  P2 - SISTEMA DE ADOÇÃO DE ANIMAIS")
+    sleep(1.5)
+    print("\n\tTURMA:")
     sleep(1)
-    print("\n\tTURMA: 2022.1 – TURMA A")
+    print("\t  2022.1 – TURMA A")
+    sleep(1.5)
+    print("\n\tMATRÍCULA:")
     sleep(1)
-    print("\n\tMATRÍCULA: 202211182")
+    print("\t  202211182")
+    sleep(1.5)
+    print("\n\tALUNO:")
     sleep(1)
-    print("\n\tNOME: HUGO LELY DE LIMA MARINHO")
+    print("\t  HUGO LELY DE LIMA MARINHO")
     sleep(10)
+    print("\n\tSaindo do Sobre!\n\tAguarde...")
+    sleep(3)
     menu()
 
 def menu():
@@ -127,33 +143,35 @@ def menu():
     if opcao == 1:
         os.system('cls') or None
         print("\n\tAbrindo o Cadastro Animal!\n\tAguarde...")
-        sleep(3)
+        sleep(2)
         cadastro_animal()
     elif opcao == 2:
         os.system('cls') or None
         print("\n\tAbrindo o Cadastro de Candidatos!\n\tAguarde...")
-        sleep(3)
+        sleep(2)
         cadastro_candidatos()
     elif opcao == 3:
         os.system('cls') or None
         print("\n\tAbrindo a Consulta dos Animais para Adoção!\n\tAguarde...")
-        sleep(3)
+        sleep(2)
         consulta()
     elif opcao == 4:
         os.system('cls') or None
         print(f"\n\tAbrindo Sobre\n\tAguarde...")
-        sleep(3)
+        sleep(2)
         sobre()
     elif opcao == 5:
         os.system('cls') or None
         print(f"\n\tSaindo do Sistema!\n\tAguarde...")
         sleep(2)
-        print(f"\n\tSistema Finalizado! Volte Sempre! :)")
-        sleep(3)
+        os.system('cls') or None
+        print(f"\n\tOBRIADO POR UTILIZAR O\n\tSISTEMA DE ADOÇÃO DE ANIMAIS")
+        print(f"\n\t🐶😺🐮🐰")
+        sleep(4)
         exit()
     else:
         os.system('cls') or None
         print(f"\n\tOpção Inválida!\n\tAguarde...")
-        sleep(3)
+        sleep(2)
 
 menu()

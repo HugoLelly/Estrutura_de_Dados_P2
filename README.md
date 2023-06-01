@@ -19,7 +19,7 @@
 >
 >_MATRÍCULA:_ **202211182**
 >
->_NOME:_ **[HUGO LELY DE LIMA MARINHO](https://github.com/HugoLelly)**
+>_ALUNO:_ **[HUGO LELY DE LIMA MARINHO](https://github.com/HugoLelly)**
 
 ### ENUNCIADO:
 
