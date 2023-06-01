@@ -48,5 +48,20 @@ def consulta():
     print("\n\tCONSULTA DOS ANIMAIS PARA ADOÇÃO")
 
 
-print(f"\n\tBEM VINDO AO SISTEMA DE ADOÇÃO DE ANIMAIS\n\tEscolha uma das opções abaixo:\n\t[1] Cadastrar Animal\n\t[2] Cadastrar Candidatos\n\t[3] Consultar Animais para Adoção\n\t[4] Sair do Sistema")
-opcao = int(input(f"\n\tInforme a opção desejada: "))
+def menu():
+    print(f"\n\tBEM VINDO AO SISTEMA DE ADOÇÃO DE ANIMAIS\n\tEscolha uma das opções abaixo:\n\t[1] Cadastrar Animal\n\t[2] Cadastrar Candidatos\n\t[3] Consultar Animais para Adoção\n\t[4] Sair do Sistema")
+    opcao = int(input(f"\n\tInforme a opção desejada: "))
+    if opcao == 1:
+        cadastro_animal()
+    elif opcao == 2:
+        cadastro_candidatos()
+    elif opcao == 3:
+        consulta()
+    elif opcao == 4:
+        print(f"\n\tSaindo do Sistema!\n\taguarde...")
+        sleep(3)
+        os.system('clear') or None
+    else:
+        print(f"\n\tOpção Inválida!\n\taguarde...")
+        sleep(3)
+        os.system('clear') or None
