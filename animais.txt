@@ -1,3 +1,12 @@
-CACHORRO,SRD,9,PRETO,DOCIL
-HH,JJ,KK,LL,ÇÇ
-gato,srd,8,preto,docil
+Cachorro,SRD,9,Preto,Docil
+Gato,SRD,8,Preto,Docil
+Rato,SRD,1,Branco,Docil
+Cavalo,SRD,5,Preto,Docil
+Cachorro,SRD,2,Preto,Bravo
+Gato,SRD,3,Preto,Bravo
+Rato,SRD,1,Branco,Bravo
+Cavalo,SRD,1,Preto,Bravo
+Cachorro,SRD,2,Preto,Manso
+Gato,SRD,3,Preto,Manso Docil
+Rato,SRD,1,Branco,Manso Docil
+Cavalo,SRD,1,Preto,Manso Docil
