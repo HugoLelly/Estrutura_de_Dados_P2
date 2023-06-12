@@ -1,0 +1,3 @@
+CACHORRO,SRD,9,PRETO,DOCIL
+HH,JJ,KK,LL,ÇÇ
+gato,srd,8,preto,docil
