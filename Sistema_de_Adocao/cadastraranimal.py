@@ -38,6 +38,7 @@ def cadastrar_animal():
             print("\tSaindo do Cadastro!\n\tAguarde...")
             sleep(1.5)
             limpar_terminal()
+            return
 
         else:
             limpar_terminal()

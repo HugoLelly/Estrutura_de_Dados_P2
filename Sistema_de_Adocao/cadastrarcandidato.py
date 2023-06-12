@@ -19,12 +19,12 @@ def cadastrar_candidato():
             print("\tCADASTRO DE CANDIDATOS")
             print("\n\tInforme os Dados do Candidato:\n")
             sleep(1.5)
-            nome = input("Nome: ")
-            telefone = input("Telefone: ")
-            email = input("E-mail: ")
-            bairro = input("Bairro: ")
-            especie_interesse = input("Espécie de interesse: ")
-            particularidades_interesse = input("Particularidades de interesse: ")
+            nome = input("\tNome: ")
+            telefone = input("\tTelefone: ")
+            email = input("\tE-mail: ")
+            bairro = input("\tBairro: ")
+            especie_interesse = input("\tEspécie de interesse: ")
+            particularidades_interesse = input("\tParticularidades de interesse: ")
             sleep(1.5)
 
             with open("candidatos.txt", "a", encoding="utf-8") as arquivo:
@@ -39,6 +39,7 @@ def cadastrar_candidato():
             print("\n\tSaindo do Cadastro!\n\tAguarde...")
             sleep(1.5)
             limpar_terminal()
+            return
 
         else:
             limpar_terminal()

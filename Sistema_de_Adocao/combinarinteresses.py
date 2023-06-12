@@ -4,9 +4,10 @@ from limparterminal import limpar_terminal
 # Função para combinar interesses de candidatos e animais
 def combinar_interesses():
     limpar_terminal()
-    print("\tBEM VINDO AS COMBINAÇÕES DE INTERESSES\n")
+    print("\tCOMBINAÇÕES\n")
     sleep(1.5)
     print("\tCombinações Encontradas")
+    print("\t-----------------------\n")
     sleep(1.5)
 
     animais = []

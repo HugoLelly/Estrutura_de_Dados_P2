@@ -21,6 +21,7 @@ def consultar_candidatos():
     limpar_terminal()
     print("\tCONSULTA DE CANDIDATOS\n")
     print(f"\t{len(candidatos_encontrados)} Candidatos Encontrados:")
+    print("\t----------------------------------\n")
     sleep(1.5)
 
     for candidato in candidatos_encontrados:

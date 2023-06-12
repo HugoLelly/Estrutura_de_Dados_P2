@@ -55,6 +55,7 @@ def cadastrar_animal():
             print("\tSaindo do Cadastro!\n\tAguarde...")
             sleep(1.5)
             limpar_terminal()
+            main()
 
         else:
             limpar_terminal()
@@ -80,12 +81,12 @@ def cadastrar_candidato():
             print("\tCADASTRO DE CANDIDATOS")
             print("\n\tInforme os Dados do Candidato:\n")
             sleep(1.5)
-            nome = input("Nome: ")
-            telefone = input("Telefone: ")
-            email = input("E-mail: ")
-            bairro = input("Bairro: ")
-            especie_interesse = input("Espécie de interesse: ")
-            particularidades_interesse = input("Particularidades de interesse: ")
+            nome = input("\tNome: ")
+            telefone = input("\tTelefone: ")
+            email = input("\tE-mail: ")
+            bairro = input("\tBairro: ")
+            especie_interesse = input("\tEspécie de interesse: ")
+            particularidades_interesse = input("\tParticularidades de interesse: ")
             sleep(1.5)
 
             with open("candidatos.txt", "a", encoding="utf-8") as arquivo:
@@ -100,6 +101,7 @@ def cadastrar_candidato():
             print("\n\tSaindo do Cadastro!\n\tAguarde...")
             sleep(1.5)
             limpar_terminal()
+            main()
 
         else:
             limpar_terminal()
@@ -127,6 +129,7 @@ def consultar_animais():
     limpar_terminal()
     print("\tCONSULTA DE ANIMAIS\n")
     print(f"\t{len(animais_encontrados)} Animais Encontrados:")
+    print("\t----------------------------------\n")
     sleep(1.5)
 
     for animal in animais_encontrados:
@@ -163,6 +166,7 @@ def consultar_candidatos():
     limpar_terminal()
     print("\tCONSULTA DE CANDIDATOS\n")
     print(f"\t{len(candidatos_encontrados)} Candidatos Encontrados:")
+    print("\t----------------------------------\n")
     sleep(1.5)
 
     for candidato in candidatos_encontrados:
@@ -183,9 +187,10 @@ def consultar_candidatos():
 # Função para combinar interesses de candidatos e animais
 def combinar_interesses():
     limpar_terminal()
-    print("\tBEM VINDO AS COMBINAÇÕES DE INTERESSES\n")
+    print("\tCOMBINAÇÕES\n")
     sleep(1.5)
     print("\tCombinações Encontradas")
+    print("\t-----------------------\n")
     sleep(1.5)
 
     animais = []

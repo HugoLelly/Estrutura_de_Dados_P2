@@ -21,6 +21,7 @@ def consultar_animais():
     limpar_terminal()
     print("\tCONSULTA DE ANIMAIS\n")
     print(f"\t{len(animais_encontrados)} Animais Encontrados:")
+    print("\t----------------------------------\n")
     sleep(1.5)
 
     for animal in animais_encontrados:
