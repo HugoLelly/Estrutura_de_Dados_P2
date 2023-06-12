@@ -1,11 +1,11 @@
-import time
+from time import sleep
 import os
 
 # Função para limpar o terminal
 def limpar_terminal():
-    print("\033c", end="")
+    os.system("cls" if os.name == "nt" else "clear")
 
-# Função para verificar se os arquivos de cadastro existem
+# Função para verificar se os arquivos txt existem. Se não existirem, serão criados.
 def verificar_arquivos():
     if not os.path.exists("animais.txt"):
         with open("animais.txt", "w", encoding="utf-8"):
@@ -15,47 +15,51 @@ def verificar_arquivos():
         with open("candidatos.txt", "w", encoding="utf-8"):
             pass
 
+
 verificar_arquivos()
 
 # Função para cadastrar animais
 def cadastrar_animal():
     limpar_terminal()
 
-
     while True:
         print("\tCADASTRO DE ANIMAIS\n")
-        opcao = input("\tDeseja Cadastrar Um Novo Animal?\n\n\t1 - Sim\n\t2 - Não\n\n\tDigite a Opção Desejada: ")
+        print("\tDeseja Cadastrar Um Novo Animal?\n")
+
+        opcao = input("\n\t1 - Sim\n\t2 - Não\n\n\tDigite a Opção Desejada: ")
+
         if opcao == "1":
             limpar_terminal()
             print("\tAbrindo Cadastro...")
-            time.sleep(1.5)
+            sleep(1.5)
             limpar_terminal()
             print("\tCADASTRAR NOVO ANIMAL")
             print("\n\tInforme os Dados do Animal:\n")
-            time.sleep(1.5)
+            sleep(1.5)
             especie = input("\tEspécie: ")
             raca = input("\tRaça: ")
             idade = input("\tIdade (meses): ")
             cor = input("\tCor: ")
             particularidades = input("\tParticularidades: ")
-            time.sleep(1.5)
+            sleep(1.5)
 
             with open("animais.txt", "a", encoding="utf-8") as arquivo:
                 arquivo.write(f"{especie},{raca},{idade},{cor},{particularidades}")
 
             print("\n\tCadastro Realizado com Sucesso!")
-            time.sleep(1.5)
+            sleep(1.5)
             limpar_terminal()
+
         elif opcao == "2":
             limpar_terminal()
             print("\tSaindo do Cadastro!\n\tAguarde...")
-            time.sleep(1.5)
+            sleep(1.5)
             limpar_terminal()
-            return
+
         else:
             limpar_terminal()
             print("\tOpção Inválida!\n\tAguarde...")
-            time.sleep(1.5)
+            sleep(1.5)
             limpar_terminal()
 
 # Função para cadastrar candidatos
@@ -65,39 +69,42 @@ def cadastrar_candidato():
     while True:
         print("\tCADASTRO DE CANDIDATOS\n")
         print("\tDeseja Cadastrar Um Novo Candidato?\n")
+
         opcao = input("\n\t1 - Sim\n\t2 - Não\n\n\tDigite a Opção Desejada: ")
+
         if opcao == "1":
             limpar_terminal()
             print("\tAbrindo Cadastro...")
-            time.sleep(1.5)
+            sleep(1.5)
             limpar_terminal()
             print("\tCADASTRO DE CANDIDATOS")
             print("\n\tInforme os Dados do Candidato:\n")
-            time.sleep(1.5)
+            sleep(1.5)
             nome = input("Nome: ")
             telefone = input("Telefone: ")
             email = input("E-mail: ")
             bairro = input("Bairro: ")
             especie_interesse = input("Espécie de interesse: ")
             particularidades_interesse = input("Particularidades de interesse: ")
-            time.sleep(1.5)
+            sleep(1.5)
 
             with open("candidatos.txt", "a", encoding="utf-8") as arquivo:
                 arquivo.write(f"{nome},{telefone},{email},{bairro},{especie_interesse},{particularidades_interesse}")
-            
+
             print("\n\tCadastro Realizado com Sucesso!")
-            time.sleep(1.5)
+            sleep(1.5)
             limpar_terminal()
+
         elif opcao == "2":
             limpar_terminal()
             print("\n\tSaindo do Cadastro!\n\tAguarde...")
-            time.sleep(1.5)
+            sleep(1.5)
             limpar_terminal()
-            return
+
         else:
             limpar_terminal()
             print("\n\tOpção Inválida!\n\tAguarde...")
-            time.sleep(1.5)
+            sleep(1.5)
             limpar_terminal()
 
 # Função para consultar animais cadastrados
@@ -114,23 +121,25 @@ def consultar_animais():
         for linha in arquivo:
             especie, raca, idade, cor, particularidades = linha.strip().split(",")
             if campo_consulta == "" or campo_consulta in especie.lower() or campo_consulta in raca.lower() or campo_consulta in idade.lower() or campo_consulta in cor.lower() or campo_consulta in particularidades.lower():
-                animais_encontrados.append((especie, raca, idade, cor, particularidades))
+                animais_encontrados.append(
+                    (especie, raca, idade, cor, particularidades))
 
     limpar_terminal()
     print("\tCONSULTA DE ANIMAIS\n")
     print(f"\t{len(animais_encontrados)} Animais Encontrados:")
-    time.sleep(1.5)
+    sleep(1.5)
+
     for animal in animais_encontrados:
-        time.sleep(0.5)
+        sleep(0.5)
         print(f"\tEspécie: {animal[0]}")
         print(f"\tRaça: {animal[1]}")
         print(f"\tIdade (Meses): {animal[2]}")
         print(f"\tCor: {animal[3]}")
         print(f"\tParticularidades: {animal[4]}")
-        time.sleep(0.5)
+        sleep(0.5)
         print("\t----------------------------------")
 
-    time.sleep(1.5)
+    sleep(1.5)
     input("\n\tPressione Enter para voltar ao menu principal.")
     limpar_terminal()
 
@@ -148,24 +157,26 @@ def consultar_candidatos():
         for linha in arquivo:
             nome, telefone, email, bairro, especie_interesse, particularidades_interesse = linha.strip().split(",")
             if campo_consulta == "" or campo_consulta in nome.lower() or campo_consulta in telefone.lower() or campo_consulta in email.lower() or campo_consulta in bairro.lower() or campo_consulta in especie_interesse.lower() or campo_consulta in particularidades_interesse.lower():
-                candidatos_encontrados.append((nome, telefone, email, bairro, especie_interesse, particularidades_interesse))
+                candidatos_encontrados.append(
+                    (nome, telefone, email, bairro, especie_interesse, particularidades_interesse))
 
     limpar_terminal()
     print("\tCONSULTA DE CANDIDATOS\n")
-    print("\t{len(candidatos_encontrados)} Candidatos Encontrados:")
-    time.sleep(1.5)
+    print(f"\t{len(candidatos_encontrados)} Candidatos Encontrados:")
+    sleep(1.5)
+
     for candidato in candidatos_encontrados:
-        time.sleep(0.5)
+        sleep(0.5)
         print(f"\tNome: {candidato[0]}")
         print(f"\tTelefone: {candidato[1]}")
         print(f"\tE-mail: {candidato[2]}")
         print(f"\tBairro: {candidato[3]}")
         print(f"\tEspécie de Interesse: {candidato[4]}")
         print(f"\tParticularidades de Interesse: {candidato[5]}")
-        time.sleep(0.5)
+        sleep(0.5)
         print("\t----------------------------------")
-
-    time.sleep(1.5)
+    
+    sleep(1.5)
     input("\n\tPressione Enter para voltar ao menu principal.")
     limpar_terminal()
 
@@ -173,9 +184,9 @@ def consultar_candidatos():
 def combinar_interesses():
     limpar_terminal()
     print("\tBEM VINDO AS COMBINAÇÕES DE INTERESSES\n")
-    time.sleep(1.5)
+    sleep(1.5)
     print("\tCombinações Encontradas")
-    time.sleep(1.5)
+    sleep(1.5)
 
     animais = []
     candidatos = []
@@ -201,33 +212,33 @@ def combinar_interesses():
 
     print(f"\n\t{len(animais_encontrados)} Animais Encontrados:\n")
     print("\t----------------------------------")
+
     for animal in animais_encontrados:
-        time.sleep(0.5)
+        sleep(0.5)
         print(f"\tEspécie: {animal[0]}")
         print(f"\tRaça: {animal[1]}")
         print(f"\tIdade: {animal[2]}")
         print(f"\tCor: {animal[3]}")
         print(f"\tParticularidades: {animal[4]}")
-        time.sleep(0.5)
+        sleep(0.5)
         print("\t----------------------------------")
 
-
-    time.sleep(1.5)
-
-    print("\n\t{len(candidatos_encontrados)} Candidatos Encontrados:\n")
+    sleep(1.5)
+    print(f"\n\t{len(candidatos_encontrados)} Candidatos Encontrados:\n")
     print("\t----------------------------------")
+
     for candidato in candidatos_encontrados:
-        time.sleep(0.5)
+        sleep(0.5)
         print(f"\tNome: {candidato[0]}")
         print(f"\tTelefone: {candidato[1]}")
         print(f"\tE-mail: {candidato[2]}")
         print(f"\tBairro: {candidato[3]}")
         print(f"\tEspécie de Interesse: {candidato[4]}")
         print(f"\tParticularidades de Interesse: {candidato[5]}")
-        time.sleep(0.5)
+        sleep(0.5)
         print("\t----------------------------------")
 
-    time.sleep(1.5)
+    sleep(1.5)
     input("\n\tPressione Enter para voltar ao menu principal.")
     limpar_terminal()
 
@@ -236,40 +247,39 @@ def exibir_sobre():
     limpar_terminal()
     print("\tSISTEMA DE ADOÇÃO DE ANIMAIS")
     print("\n\tDesenvolvido por:\n\tHUGO LELY DE LIMA MARINHO\n")
-    time.sleep(5)
+    sleep(5)
     limpar_terminal()
     print("\tUNIVERSIDADE DE VASSOURAS")
     print("\t  CAMPUS MARICÁ")
-    time.sleep(1.5)
+    sleep(1.5)
     print("\tCURSO:")
     print("\t  ENGENHARIA DE SOFTWARE")
-    time.sleep(1.5)
+    sleep(1.5)
     print("\tDISCIPLINA:")
     print("\t  ESTRUTURA DE DADOS")
-    time.sleep(1.5)
+    sleep(1.5)
     print("\tPROFESSOR:")
     print("\t  MÁRCIO GARRIDO")
-    time.sleep(1.5)
+    sleep(1.5)
     print("\tTÍTULO:")
     print("\t  P2 - SISTEMA DE ADOÇÃO DE ANIMAIS")
-    time.sleep(1.5)
+    sleep(1.5)
     print("\tTURMA:")
     print("\t  2022.1 – TURMA A")
-    time.sleep(1.5)
+    sleep(1.5)
     print("\tMATRÍCULA:")
     print("\t  202211182")
-    time.sleep(1.5)
+    sleep(1.5)
     print("\tALUNO:")
     print("\t  HUGO LELY DE LIMA MARINHO")
-    time.sleep(10)
+    sleep(10)
     print("\n\tSaindo do Sobre!\n\tAguarde...")
-    time.sleep(1.5)
-    main()
+    sleep(1.5)
+    limpar_terminal()
 
 # Função principal
 def main():
     limpar_terminal()
-
     while True:
         print("\tBEM VINDO AO SISTEMA DE ADOÇÃO DE ANIMAIS")
         print("\n\tEscolha uma Opção:\n")
@@ -280,52 +290,51 @@ def main():
         print("\t5 - Realizar Combinações")
         print("\t6 - Sobre")
         print("\t7 - Sair")
-
         opcao = input("\n\tDigite a opção desejada: ")
-
         if opcao == "1":
             limpar_terminal()
             print("\tAbrindo o Cadastro de Animais")
-            time.sleep(1.5)
+            sleep(1.5)
             cadastrar_animal()
         elif opcao == "2":
             limpar_terminal()
             print("\tAbrindo o Cadastro de Candidatos")
-            time.sleep(1.5)
+            sleep(1.5)
             cadastrar_candidato()
         elif opcao == "3":
             limpar_terminal()
             print("\tAbrindo a Consulta de Animais")
-            time.sleep(1.5)
+            sleep(1.5)
             consultar_animais()
         elif opcao == "4":
             limpar_terminal()
             print("\tAbrindo a Consulta dos Candidatos")
-            time.sleep(1.5)
+            sleep(1.5)
             consultar_candidatos()
         elif opcao == "5":
             limpar_terminal()
             print("\tAbrindo as Combinações")
-            time.sleep(1.5)
+            sleep(1.5)
             combinar_interesses()
         elif opcao == "6":
             limpar_terminal()
             print("\tAbrindo o Sobre")
-            time.sleep(1.5)
+            sleep(1.5)
             exibir_sobre()
         elif opcao == "7":
             limpar_terminal()
             print("\tSaindo do Sistema\n\tAguarde...")
-            time.sleep(1.5)
+            sleep(1.5)
             limpar_terminal()
             print("\tOBRIADO POR UTILIZAR O\n\tSISTEMA DE ADOÇÃO DE ANIMAIS")
             print("\n\t🐶😺🐮🐰")
-            time.sleep(3)
+            sleep(3)
             exit()
         else:
             limpar_terminal()
             print("\tOpção inválida!\n\tAgurade...")
-            time.sleep(1.5)
+            sleep(1.5)
+            limpar_terminal()
 
 if __name__ == "__main__":
     main()

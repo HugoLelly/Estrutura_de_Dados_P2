@@ -1,7 +1,7 @@
 from time import sleep
 from limparterminal import limpar_terminal
 
-
+# Função para consultar animais cadastrados
 def consultar_animais():
     limpar_terminal()
     print("\tCONSULTA DE ANIMAIS\n")
@@ -22,6 +22,7 @@ def consultar_animais():
     print("\tCONSULTA DE ANIMAIS\n")
     print(f"\t{len(animais_encontrados)} Animais Encontrados:")
     sleep(1.5)
+
     for animal in animais_encontrados:
         sleep(0.5)
         print(f"\tEspécie: {animal[0]}")
@@ -35,4 +36,3 @@ def consultar_animais():
     sleep(1.5)
     input("\n\tPressione Enter para voltar ao menu principal.")
     limpar_terminal()
-    return

@@ -1,6 +1,7 @@
 from time import sleep
 from limparterminal import limpar_terminal
 
+# Função para combinar interesses de candidatos e animais
 def combinar_interesses():
     limpar_terminal()
     print("\tBEM VINDO AS COMBINAÇÕES DE INTERESSES\n")
@@ -32,6 +33,7 @@ def combinar_interesses():
 
     print(f"\n\t{len(animais_encontrados)} Animais Encontrados:\n")
     print("\t----------------------------------")
+
     for animal in animais_encontrados:
         sleep(0.5)
         print(f"\tEspécie: {animal[0]}")
@@ -42,11 +44,10 @@ def combinar_interesses():
         sleep(0.5)
         print("\t----------------------------------")
 
-
     sleep(1.5)
-
-    print("\n\t{len(candidatos_encontrados)} Candidatos Encontrados:\n")
+    print(f"\n\t{len(candidatos_encontrados)} Candidatos Encontrados:\n")
     print("\t----------------------------------")
+
     for candidato in candidatos_encontrados:
         sleep(0.5)
         print(f"\tNome: {candidato[0]}")
@@ -61,4 +62,3 @@ def combinar_interesses():
     sleep(1.5)
     input("\n\tPressione Enter para voltar ao menu principal.")
     limpar_terminal()
-    return

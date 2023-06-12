@@ -1,6 +1,7 @@
 from time import sleep
 from limparterminal import limpar_terminal
 
+# Função para exibir informações sobre o sistema
 def exibir_sobre():
     limpar_terminal()
     print("\tSISTEMA DE ADOÇÃO DE ANIMAIS")
@@ -34,5 +35,3 @@ def exibir_sobre():
     print("\n\tSaindo do Sobre!\n\tAguarde...")
     sleep(1.5)
     limpar_terminal()
-    return
-    

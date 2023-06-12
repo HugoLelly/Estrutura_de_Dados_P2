@@ -8,12 +8,11 @@ from combinarinteresses import combinar_interesses
 from exibirsobre import exibir_sobre
 from verificararquivos import verificar_arquivos
 
-
 verificar_arquivos()
 
+# Função principal
 def main():
     limpar_terminal()
-
     while True:
         print("\tBEM VINDO AO SISTEMA DE ADOÇÃO DE ANIMAIS")
         print("\n\tEscolha uma Opção:\n")
@@ -24,9 +23,7 @@ def main():
         print("\t5 - Realizar Combinações")
         print("\t6 - Sobre")
         print("\t7 - Sair")
-
         opcao = input("\n\tDigite a opção desejada: ")
-
         if opcao == "1":
             limpar_terminal()
             print("\tAbrindo o Cadastro de Animais")
@@ -70,6 +67,7 @@ def main():
             limpar_terminal()
             print("\tOpção inválida!\n\tAgurade...")
             sleep(1.5)
+            limpar_terminal()
 
 if __name__ == "__main__":
     main()
