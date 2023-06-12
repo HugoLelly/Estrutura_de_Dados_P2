@@ -1,0 +1,38 @@
+from time import sleep
+from limparterminal import limpar_terminal
+
+def exibir_sobre():
+    limpar_terminal()
+    print("\tSISTEMA DE ADOÇÃO DE ANIMAIS")
+    print("\n\tDesenvolvido por:\n\tHUGO LELY DE LIMA MARINHO\n")
+    sleep(5)
+    limpar_terminal()
+    print("\tUNIVERSIDADE DE VASSOURAS")
+    print("\t  CAMPUS MARICÁ")
+    sleep(1.5)
+    print("\tCURSO:")
+    print("\t  ENGENHARIA DE SOFTWARE")
+    sleep(1.5)
+    print("\tDISCIPLINA:")
+    print("\t  ESTRUTURA DE DADOS")
+    sleep(1.5)
+    print("\tPROFESSOR:")
+    print("\t  MÁRCIO GARRIDO")
+    sleep(1.5)
+    print("\tTÍTULO:")
+    print("\t  P2 - SISTEMA DE ADOÇÃO DE ANIMAIS")
+    sleep(1.5)
+    print("\tTURMA:")
+    print("\t  2022.1 – TURMA A")
+    sleep(1.5)
+    print("\tMATRÍCULA:")
+    print("\t  202211182")
+    sleep(1.5)
+    print("\tALUNO:")
+    print("\t  HUGO LELY DE LIMA MARINHO")
+    sleep(10)
+    print("\n\tSaindo do Sobre!\n\tAguarde...")
+    sleep(1.5)
+    limpar_terminal()
+    return
+    
